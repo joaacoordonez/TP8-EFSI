@@ -1,0 +1,21 @@
+.carrusel-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.carrusel-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.carrusel {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: stretch;
+    margin: 0 auto;
+    max-width: 100%;
+}
+

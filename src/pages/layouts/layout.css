@@ -1,0 +1,105 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 0 40px;
+    height: 60px;
+    background-color: #f9f6f5;
+    border-bottom: 2px solid #ccc;
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  nav img {
+    height: 270px;
+    margin-right: 40px;
+    object-fit: contain;
+    margin-top: 17px;
+  }
+  
+  nav a {
+    color: #08142c;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    text-decoration: none;
+    line-height: 60px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    line-height: 60px;
+    font-family: inherit;
+  }
+  
+  .dropdown .nav-link {
+    cursor: pointer;
+    color: #08142c;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+    user-select: none;
+    padding: 0 8px;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+  
+  .dropdown .nav-link:hover {
+    color: #007bff;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #f9f6f5;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 1000;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #08142c;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    border-radius: 3px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  footer {
+    background-color: #08142c;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-family: sans-serif;
+    font-size: 14px;
+    border-top: 1px solid #ccc;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  footer p {
+    margin: 4px;
+  }

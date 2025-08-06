@@ -1,0 +1,15 @@
+.home-container {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .home-container h1 {
+    color: #08142c;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+
