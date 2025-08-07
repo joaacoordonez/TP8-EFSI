@@ -1,5 +1,5 @@
 import ProductoDetallado from "../ProductoDetallado/ProductoDetallado.jsx";
-import api from "../../../api/api.js";
+import api from "../../../api/api.js"; 
 import { useEffect, useState } from "react";
 
 const CardXId = ({ id }) => {

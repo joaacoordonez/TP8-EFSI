@@ -1,0 +1,54 @@
+.quienes-container {
+    padding: 40px;
+    background-color: #f9f6f5;
+    color: #333;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .presentacion {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+  
+  .presentacion h1 {
+    font-size: 32px;
+    color: #08142c;
+    margin-bottom: 20px;
+  }
+  
+  .presentacion p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .oficinas {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .oficinas h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #08142c;
+  }
+  
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 1px solid #08142c;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }

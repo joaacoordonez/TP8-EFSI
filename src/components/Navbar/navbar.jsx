@@ -1,6 +1,24 @@
 import { Link, Outlet } from "react-router-dom";
-import './navbar.css'
+import { useEffect, useState } from "react";
+import api from "../../../api/api.js"; 
+import "./navbar.css";
+
 const Navbar = () => {
+  const [categorias, setCategorias] = useState([]);
+
+  useEffect(() => {
+    api
+      .get("/products/categories")
+      .then((res) => {
+        setCategorias(res.data);
+      })
+      .catch((err) => {
+        console.error("Error al obtener categorías:", err);
+      });
+  }, []);
+
+  console.log(categorias)
+
   return (
     <>
       <nav>
@@ -10,6 +28,11 @@ const Navbar = () => {
           <p className="nav-link">Productos ▾</p>
           <div className="dropdown-content">
             <Link to="/productos">Todos</Link>
+            {categorias.map((cat) => (
+              <Link key={cat.slug} to={`/categoria/${cat.name}`}>
+                  
+              </Link>
+            ))}
           </div>
         </div>
         <Link to="/contacto">Contacto</Link>
