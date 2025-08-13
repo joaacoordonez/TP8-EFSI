@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: 'TP8-EFSI',
-  homepage: 'https://github.com/joaacoordonez/TP8-EFSI'
+  homepage: "https://joaacoordonez.github.io/TP8-EFSI"
 })
