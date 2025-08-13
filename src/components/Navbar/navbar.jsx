@@ -1,7 +1,8 @@
 import { Link, Outlet } from "react-router-dom";
 import { useEffect, useState } from "react";
-import api from "../../../api/api.js"; 
+import api from "../../../api/api.js";
 import "./navbar.css";
+import logo from "../../assets/logo/logo.png"
 
 const Navbar = () => {
   const [categorias, setCategorias] = useState([]);
@@ -17,11 +18,12 @@ const Navbar = () => {
       });
   }, []);
 
-  console.log(categorias)
+  console.log(categorias);
 
   return (
     <>
       <nav>
+        <img src={logo} alt="logo" />
         <Link to="/">Home</Link>
         <Link to="/quienes-somos">Quienes somos</Link>
         <div className="dropdown">
@@ -29,13 +31,13 @@ const Navbar = () => {
           <div className="dropdown-content">
             <Link to="/productos">Todos</Link>
             {categorias.map((cat) => (
-              <Link key={cat.slug} to={`/categoria/${cat.name}`}>
-                  
+              <Link key={cat.slug} to={`/categoria/${cat.slug}`}>
+                {cat.name}
               </Link>
             ))}
           </div>
+          <Link to={"/contacto"}>Contacto</Link>
         </div>
-        <Link to="/contacto">Contacto</Link>
       </nav>
 
       <Outlet />

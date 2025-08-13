@@ -7,10 +7,12 @@ const CardXId = ({ id }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (!id) return;
+  
     api
       .get(`/products/${id}`)
       .then((res) => {
-        setProducto(res.data);  
+        setProducto(res.data);
         setLoading(false);
       })
       .catch((err) => {
@@ -18,6 +20,7 @@ const CardXId = ({ id }) => {
         setLoading(false);
       });
   }, [id]);
+  
 
   return (
     <>

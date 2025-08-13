@@ -4,7 +4,7 @@ const BotonVer = ({ id }) => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate(`/productos/${id}`);
+        navigate(`/producto/${id}`);
     };
 
     return (

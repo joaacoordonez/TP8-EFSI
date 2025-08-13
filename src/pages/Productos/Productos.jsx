@@ -1,16 +1,11 @@
 import CardProducto from "../../components/CardProducto/CardProducto";
 import api from "../../../api/api.js";
 import { useEffect, useState } from "react";
-import './productos.css'
-import { useParams } from "react-router-dom";
+import "./productos.css";
 
 const Productos = () => {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  const {nombreCategoria} = useParams()
-
-  const productosMostrar = productos.filter((p) => p.slug == nombreCategoria)
 
   useEffect(() => {
     api
@@ -31,11 +26,10 @@ const Productos = () => {
         <p>Cargando productos...</p>
       ) : (
         <>
+        <h1 className="title">Todos nuestros productos</h1>
           <ul className="lista-productos">
             {productos.map((producto) => (
-              
-                <CardProducto key={producto.id} producto={productosMostrar} />
-        
+              <CardProducto key={producto.id} producto={producto} />
             ))}
           </ul>
         </>
